@@ -19,7 +19,7 @@ export default function LogoCard() {
 
   return (
     <motion.div
-      className="px-14 py-8 lg:px-20 border-2 border-black/50 rounded-xl bg-white/20 backdrop-blur-md shadow-lg cursor-pointer select-none"
+      className="px-14 py-8 lg:px-20 border-2 border-black/70 rounded-lg bg-white/20 backdrop-blur shadow-2xl cursor-pointer select-none"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -31,7 +31,7 @@ export default function LogoCard() {
       onMouseLeave={handleMouseLeave}
     >
       <motion.div
-        className="font-changa text-3xl lg:text-4xl text-black/70"
+        className="font-sans text-3xl lg:text-4xl text-black/80"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.6 }}
@@ -40,7 +40,7 @@ export default function LogoCard() {
       </motion.div>
 
       <motion.div
-        className="font-changa text-3xl lg:text-4xl text-black/70"
+        className="font-sans text-3xl lg:text-4xl text-black/80"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7, duration: 0.6 }}
@@ -56,7 +56,7 @@ export default function LogoCard() {
       />
 
       <motion.div
-        className="text-2xl lg:text-3xl font-mono text-sky-800"
+        className="text-2xl lg:text-3xl font-mono text-sky-900"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.3, duration: 0.6 }}

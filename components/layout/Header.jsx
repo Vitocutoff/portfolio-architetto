@@ -59,7 +59,7 @@ export default function Header() {
           initial={{ opacity: 0, y: -20 }}
           animate={showLogo ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
           transition={{ type: "spring", stiffness: 200, damping: 18, delay: 0.6 }}
-          className="font-mono ml-2 text-sky-900"
+          className="font-mono ml-2 text-sky-950"
         >
           Architetto
         </motion.span>
