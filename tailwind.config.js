@@ -15,7 +15,6 @@ module.exports = {
     extend: {
       fontFamily: {
         qwitcher: ["Qwitcher Grypen", "cursive"],
-        changa: ["Changa One", "sans-serif"],
       },
     },
   },

@@ -54,10 +54,10 @@ export default function PrivacyPolicyPage() {
       >
 
         <h2
-          className="text-xl font-semibold px-4 py-1
-                     tracking-wide font-mono mb-3 md:w-[350px]
-                     bg-gradient-to-r from-neutral-600/20
-                     o-neutral-500/60 text-sky-500/60
+          className="text-xl lg:text-2xl font-semibold px-4 py-1
+                     tracking-wide font-mono mb-4 lg:w-[400px]
+                     bg-gradient-to-r from-neutral-600/10
+                     to-neutral-500/10 text-sky-500/60
                      rounded-lg border border-white/5
                      lg:tracking-wider"
         >
@@ -67,7 +67,8 @@ export default function PrivacyPolicyPage() {
         </h2>
 
         <p
-          className="px-4 py-1 md:w-[500px]"
+          className="px-4 py-1 lg:w-[500px]
+                     lg:text-lg lg:tracking-wider"
         >
 
           I cookie tecnici permettono al sito di mantenere attive
@@ -83,17 +84,19 @@ export default function PrivacyPolicyPage() {
       >
 
         <h2
-          className="text-xl font-semibold px-4 py-1
-                     tracking-wide font-mono mb-3 md:w-[350px]
-                     bg-gradient-to-r from-neutral-600/20
-                     o-neutral-500/60 text-sky-500/60
-                     rounded-lg border border-white/5"
+          className="text-xl lg:text-2xl font-semibold px-4 py-1
+                     tracking-wide font-mono mb-4 lg:w-[400px]
+                     bg-gradient-to-r from-neutral-600/10
+                     to-neutral-500/10 text-sky-500/60
+                     rounded-lg border border-white/5
+                     lg:tracking-wider"
         >
           3. Consenso e Revoca
         </h2>
 
         <p
-          className="px-4 py-1 md:w-[500px]"
+          className="px-4 py-1 lg:w-[500px]
+                     lg:text-lg lg:tracking-wider"
         >
 
           Accettando i cookie tecnici tramite il banner, confermi di
@@ -108,11 +111,12 @@ export default function PrivacyPolicyPage() {
       <section>
 
         <h2
-          className="text-xl font-semibold px-4 py-1
-                     tracking-wide font-mono mb-3 md:w-[350px]
-                     bg-gradient-to-r from-neutral-600/20
-                     o-neutral-500/60 text-sky-500/60
-                     rounded-lg border border-white/5"
+          className="text-xl lg:text-2xl font-semibold px-4 py-1
+                     tracking-wide font-mono mb-4 lg:w-[400px]
+                     bg-gradient-to-r from-neutral-600/10
+                     to-neutral-500/10 text-sky-500/60
+                     rounded-lg border border-white/5
+                     lg:tracking-wider"
         >
 
           4. Contatti
@@ -120,7 +124,8 @@ export default function PrivacyPolicyPage() {
         </h2>
 
         <p
-          className="px-4 py-1 md:w-[500px]"
+          className="px-4 py-1 lg:w-[500px]
+                     lg:text-lg lg:tracking-wider"
         >
 
           Per qualsiasi informazione relativa alla privacy puoi
