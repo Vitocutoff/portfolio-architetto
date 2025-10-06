@@ -27,7 +27,7 @@ export default function MobileMenu({ isOpen, toggleMenu, closeMenu }) {
   ];
 
   const linkClass = (path) =>
-    `text-xl font-medium font-sans transition-colors ${
+    `text-xl font-medium font-Sans transition-colors ${
       pathname === path
         ? "text-sky-700 font-semibold"
         : "hover:text-sky-500"
@@ -59,10 +59,11 @@ export default function MobileMenu({ isOpen, toggleMenu, closeMenu }) {
             transition={{ type: "tween", duration: 0.35, ease: "easeInOut" }}
             className="fixed inset-0 w-screen
                        h-screen z-[70]
-                       bg-gradient-to-l
-                       from-gray-800
-                       to-gray-950
-                       text-gray-50"
+                       bg-gradient-to-b
+                       from-neutral-950
+                       via-neutral-900
+                       to-neutral-950
+                       text-gray-100"
           >
 
             <div
@@ -72,23 +73,23 @@ export default function MobileMenu({ isOpen, toggleMenu, closeMenu }) {
             >
 
               <div
-                className="border border-white rounded
+                className="border border-white rounded-lg
                            px-11 py-6 text-center inline-block"
               >
 
                 <div
                   className="text-xl font-bold uppercase
-                             tracking-wide"
+                             tracking-wide font-Sans"
                 >
 
                   mauro
 
                 </div>
-                
-                <div className="text-xl font-bold uppercase tracking-wide">
+
+                <div className="text-xl font-bold font-Sans uppercase tracking-wide">
                   concentri
                 </div>
-                
+
                 <div
                   className="border-t border-gray-400
                              mx-auto my-2"
@@ -131,7 +132,7 @@ export default function MobileMenu({ isOpen, toggleMenu, closeMenu }) {
           </motion.div>
         )}
       </AnimatePresence>
-      
+
     </>
   );
 }

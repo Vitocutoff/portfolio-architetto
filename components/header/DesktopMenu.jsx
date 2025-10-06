@@ -8,7 +8,7 @@ export default function DesktopMenu() {
   const pathname = usePathname();
 
   const linkClass = (path) =>
-    `${pathname === path ? "text-sky-700 font-semibold cursor-default" : "hover:text-sky-900"} transition-colors`;
+    `${pathname === path ? "text-sky-800 font-semibold cursor-default" : "hover:text-sky-900"} transition-colors`;
 
   const menuItems = [
     { href: "/", label: "Home", style: "skew", skewDir: 1 },
@@ -54,7 +54,7 @@ export default function DesktopMenu() {
   };
 
   const hoverEffect = {
-    whileHover: { scale: 1.1, rotate: 2 },
+    whileHover: { scale: 1.1, rotate: -1 },
     transition: { type: "spring", stiffness: 280, damping: 12 },
   };
 
@@ -66,8 +66,8 @@ export default function DesktopMenu() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="flex gap-7 font-sans
-                   font-thin text-md
+        className="flex gap-6 font-sans tracking-wide
+                   text-black/80 text-lg
                    overflow-visible px-2"
       >
 
@@ -92,7 +92,7 @@ export default function DesktopMenu() {
           </motion.li>
         ))}
       </motion.ul>
-      
+
     </nav>
   );
 }

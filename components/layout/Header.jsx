@@ -5,6 +5,7 @@ import MobileMenu from "@/components/header/MobileMenu";
 import { motion, useScroll } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,71 +28,90 @@ export default function Header() {
   }, [scrollY, pathname]);
 
   return (
+
     <header
-      className="backdrop-blur-xl backdrop-saturate-200
-                 bg-white/40 fixed flex items-center
-                 justify-between left-0 px-4 py-2 md:py-3
-                 lg:py-4 top-0 w-full z-50 border-b
-                 border-white/30 shadow-lg"
+      role="banner"
+      className="fixed top-0 left-0 w-full z-50
+                 border-b border-white/10
+                 bg-white/40 backdrop-blur-lg
+                 backdrop-saturate-200 shadow-2xl
+                 transition-colors duration-300"
     >
 
       <div
-        className="flex items-center"
+        className="max-w-screen-xl mx-auto flex
+                   items-center justify-between
+                   px-4 py-3 md:py-4 lg:py-5"
       >
 
-        <motion.span
-          initial={{ opacity: 0, y: -20 }}
-          animate={showLogo ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-          transition={{ type: "spring", stiffness: 200, damping: 18, delay: 0 }}
-          className="font-qwitcher font-semibold text-3xl"
+        {/* LOGO */}
+        <Link
+          href="/"
+          aria-label="Torna alla homepage di Mauro Concentri Architetto"
+          className="flex items-center gap-2
+                     focus:outline-none rounded"
         >
 
-          Mauro Concentri
+          <motion.span
+            initial={{ opacity: 0, y: -20 }}
+            animate={showLogo ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+            transition={{ type: "spring", stiffness: 200, damping: 18, delay: 0 }}
+            className="font-qwitcher font-semibold text-4xl"
+          >
 
-        </motion.span>
+            Mauro Concentri
 
-        <motion.span
-          initial={{ opacity: 0, y: -20 }}
-          animate={showLogo ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-          transition={{ type: "spring", stiffness: 200, damping: 18, delay: 0.3 }}
-          className="font-thin ml-2 text-3xl
-                     text-red-500"
+          </motion.span>
+
+          <motion.span
+            initial={{ opacity: 0, y: -20 }}
+            animate={showLogo ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+            transition={{ type: "spring", stiffness: 200, damping: 18, delay: 0.3 }}
+            className="font-thin text-3xl text-red-500"
+            aria-hidden="true"
+          >
+
+            |
+
+          </motion.span>
+
+          <motion.span
+            initial={{ opacity: 0, y: -20 }}
+            animate={showLogo ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+            transition={{ type: "spring", stiffness: 200, damping: 18, delay: 0.6 }}
+            className="font-mono text-sky-900"
+          >
+
+            Architetto
+
+          </motion.span>
+
+        </Link>
+
+        {/* NAVIGATION */}
+        <nav
+          aria-label="Menu principale"
+          className="hidden lg:flex"
         >
 
-          |
+          <DesktopMenu />
 
-        </motion.span>
+        </nav>
 
-        <motion.span
-          initial={{ opacity: 0, y: -20 }}
-          animate={showLogo ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-          transition={{ type: "spring", stiffness: 200, damping: 18, delay: 0.6 }}
-          className="font-mono ml-2 text-sky-950"
+        {/* MOBILE MENU */}
+        <div
+          className="block lg:hidden"
         >
 
-          Architetto
-          
-        </motion.span>
+          <MobileMenu
+            isOpen={menuOpen}
+            toggleMenu={() => setMenuOpen(!menuOpen)}
+            closeMenu={() => setMenuOpen(false)}
+            aria-expanded={menuOpen}
+            aria-label="Menu mobile"
+          />
 
-      </div>
-
-      <div
-        className="hidden lg:flex"
-      >
-
-        <DesktopMenu />
-
-      </div>
-
-      <div
-        className="block lg:hidden"
-      >
-
-        <MobileMenu
-          isOpen={menuOpen}
-          toggleMenu={() => setMenuOpen(!menuOpen)}
-          closeMenu={() => setMenuOpen(false)}
-        />
+        </div>
 
       </div>
 
