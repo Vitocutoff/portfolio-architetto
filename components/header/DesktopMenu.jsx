@@ -1,8 +1,8 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
 
 export default function DesktopMenu() {
   const pathname = usePathname();
@@ -59,26 +59,40 @@ export default function DesktopMenu() {
   };
 
   return (
+
     <nav>
+
       <motion.ul
-        className="flex gap-7 font-sans font-thin text-md overflow-visible px-2"
         variants={container}
         initial="hidden"
         animate="show"
+        className="flex gap-7 font-sans
+                   font-thin text-md
+                   overflow-visible px-2"
       >
+
         {menuItems.map((itemData) => (
+
           <motion.li
             key={itemData.href}
             custom={itemData.skewDir}
             variants={variants[itemData.style]}
             {...(pathname !== itemData.href ? hoverEffect : {})}
           >
-            <Link href={itemData.href} className={linkClass(itemData.href)}>
+
+            <Link
+              href={itemData.href}
+              className={linkClass(itemData.href)}
+            >
+
               {itemData.label}
+
             </Link>
+
           </motion.li>
         ))}
       </motion.ul>
+      
     </nav>
   );
 }

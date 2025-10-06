@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import DesktopMenu from "@/components/header/DesktopMenu";
+import MobileMenu from "@/components/header/MobileMenu";
 import { motion, useScroll } from "framer-motion";
 import { usePathname } from "next/navigation";
-import MobileMenu from "@/components/header/MobileMenu";
-import DesktopMenu from "@/components/header/DesktopMenu";
+import { useEffect, useState } from "react";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,9 +28,11 @@ export default function Header() {
 
   return (
     <header
-      className="backdrop-blur-xl backdrop-saturate-200 bg-white/40
-                 fixed flex items-center justify-between left-0 px-4 py-2 md:py-3 lg:py-4 top-0
-                 w-full z-50 border-b border-white/30 shadow-lg"
+      className="backdrop-blur-xl backdrop-saturate-200
+                 bg-white/40 fixed flex items-center
+                 justify-between left-0 px-4 py-2 md:py-3
+                 lg:py-4 top-0 w-full z-50 border-b
+                 border-white/30 shadow-lg"
     >
 
       <div
@@ -43,16 +45,21 @@ export default function Header() {
           transition={{ type: "spring", stiffness: 200, damping: 18, delay: 0 }}
           className="font-qwitcher font-semibold text-3xl"
         >
+
           Mauro Concentri
+
         </motion.span>
 
         <motion.span
           initial={{ opacity: 0, y: -20 }}
           animate={showLogo ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
           transition={{ type: "spring", stiffness: 200, damping: 18, delay: 0.3 }}
-          className="font-thin ml-2 text-red-500 text-3xl"
+          className="font-thin ml-2 text-3xl
+                     text-red-500"
         >
+
           |
+
         </motion.span>
 
         <motion.span
@@ -61,7 +68,9 @@ export default function Header() {
           transition={{ type: "spring", stiffness: 200, damping: 18, delay: 0.6 }}
           className="font-mono ml-2 text-sky-950"
         >
+
           Architetto
+          
         </motion.span>
 
       </div>
