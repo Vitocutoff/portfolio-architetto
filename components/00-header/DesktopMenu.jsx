@@ -12,11 +12,11 @@ export default function DesktopMenu() {
 
   const menuItems = [
     { href: "/", label: "Home", style: "skew", skewDir: 1 },
-    { href: "/cv", label: "CV", style: "clip" },
-    { href: "/impianti-sportivi", label: "Impianti Sportivi", style: "dance" },
-    { href: "/elenco-progetti", label: "Elenco Progetti", style: "skew", skewDir: -1 },
-    { href: "/work-in-progress", label: "Work in Progress", style: "clip" },
-    { href: "/contatti", label: "Contatti", style: "dance" },
+    { href: "/01-cv", label: "CV", style: "clip" },
+    { href: "/02-impianti-sportivi", label: "Impianti Sportivi", style: "dance" },
+    { href: "/03-elenco-progetti", label: "Elenco Progetti", style: "skew", skewDir: -1 },
+    { href: "/04-work-in-progress", label: "Work in Progress", style: "clip" },
+    { href: "/05-contatti", label: "Contatti", style: "dance" },
   ];
 
   const container = {

@@ -1,7 +1,7 @@
 "use client";
 
-import DesktopMenu from "@/components/header/DesktopMenu";
-import MobileMenu from "@/components/header/MobileMenu";
+import DesktopMenu from "@/components/00-header/DesktopMenu";
+import MobileMenu from "@/components/00-header/MobileMenu";
 import { motion, useScroll } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -32,7 +32,7 @@ export default function Header() {
     <header
       role="banner"
       className="fixed top-0 left-0 w-full z-50
-                 border-b border-white/10
+                 border-b border-white/5
                  bg-white/40 backdrop-blur-lg
                  backdrop-saturate-200 shadow-2xl
                  transition-colors duration-300"

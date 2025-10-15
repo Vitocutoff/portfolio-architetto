@@ -1,29 +1,39 @@
-import HeroSection from "@/components/home/HeroSection";
-import QuoteSection from "@/components/home/QuoteSection";
-import PreviewSection from "@/components/home/PreviewSection";
-import WorkInProgressSection from "@/components/home/WorkInProgressSection";
-import OverlaySection from "@/components/home/OverlaySection";
+import HeroSection from "@/components/01-home/HeroSection";
+import QuoteSection from "@/components/01-home/QuoteSection";
+import PreviewSection from "@/components/01-home/PreviewSection";
+import WorkInProgressSection from "@/components/01-home/WorkInProgressSection";
+import OverlaySection from "@/components/01-home/OverlaySection";
 
 export default function HomePage() {
   return (
     <>
+
       <HeroSection />
 
-      <div className="bg-white">
+      <div>
+
         <QuoteSection />
+
       </div>
 
-      <div className="bg-gray-100">
+      <div>
+
         <PreviewSection />
+
       </div>
 
-      <div className="bg-black text-white">
+      <div>
+
         <WorkInProgressSection />
+
       </div>
 
-      <div className="bg-white">
+      <div>
+
         <OverlaySection />
+
       </div>
+
     </>
   );
 }

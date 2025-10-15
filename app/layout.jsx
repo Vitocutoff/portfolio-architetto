@@ -1,7 +1,7 @@
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import CookieBanner from "@/components/layout/CookieBanner";
-import Footer from "@/components/layout/Footer";
+import Header from "@/components/Header";
+import CookieBanner from "@/components/CookieBanner";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Mauro Concentri | Architetto",

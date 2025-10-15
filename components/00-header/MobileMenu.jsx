@@ -19,11 +19,11 @@ export default function MobileMenu({ isOpen, toggleMenu, closeMenu }) {
 
   const links = [
     { href: "/", label: "Home" },
-    { href: "/cv", label: "CV" },
-    { href: "/impianti-sportivi", label: "Impianti Sportivi" },
-    { href: "/elenco-progetti", label: "Elenco Progetti" },
-    { href: "/work-in-progress", label: "Work in Progress" },
-    { href: "/contatti", label: "Contatti" },
+    { href: "/01-cv", label: "CV" },
+    { href: "/02-impianti-sportivi", label: "Impianti Sportivi" },
+    { href: "/03-elenco-progetti", label: "Elenco Progetti" },
+    { href: "/04-work-in-progress", label: "Work in Progress" },
+    { href: "/05-contatti", label: "Contatti" },
   ];
 
   const linkClass = (path) =>
