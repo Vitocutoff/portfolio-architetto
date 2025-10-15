@@ -14,8 +14,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        qwitcher: ["Qwitcher Grypen", "cursive"],
-        Sans: ["Manrope", "sans-serif"],
+        corsivo: ["Qwitcher Grypen", "cursive"],
       },
     },
   },

@@ -6,6 +6,9 @@ import Footer from "@/components/Footer";
 export const metadata = {
   title: "Mauro Concentri | Architetto",
   description: "Portfolio di Mauro Concentri Architetto a Vicenza",
+  icons: {
+    icon: "/images/favicon/favicon.svg",
+  },
   metadataBase: new URL("https://www.mauroconcentriarchitetto.com"),
   openGraph: {
     title: "Mauro Concentri | Architetto",

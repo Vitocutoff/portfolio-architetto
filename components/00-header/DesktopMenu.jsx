@@ -3,12 +3,18 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Reem_Kufi_Fun } from "next/font/google";
+
+const navigation = Reem_Kufi_Fun({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export default function DesktopMenu() {
   const pathname = usePathname();
 
   const linkClass = (path) =>
-    `${pathname === path ? "text-sky-800 font-semibold cursor-default" : "hover:text-sky-900"} transition-colors`;
+    `${pathname === path ? "text-blue-900/95 font-bold cursor-default" : "hover:text-blue-950/95"} transition-colors`;
 
   const menuItems = [
     { href: "/", label: "Home", style: "skew", skewDir: 1 },
@@ -54,7 +60,7 @@ export default function DesktopMenu() {
   };
 
   const hoverEffect = {
-    whileHover: { scale: 1.1, rotate: -1 },
+    whileHover: { scale: 1.05, rotate: -1 },
     transition: { type: "spring", stiffness: 280, damping: 12 },
   };
 
@@ -66,9 +72,8 @@ export default function DesktopMenu() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="flex gap-6 font-sans tracking-wide
-                   text-black/80 text-lg
-                   overflow-visible px-2"
+        className={`${navigation.className} flex gap-5 tracking-wide
+                   text-black/90 text-xl overflow-visible px-2`}
       >
 
         {menuItems.map((itemData) => (
