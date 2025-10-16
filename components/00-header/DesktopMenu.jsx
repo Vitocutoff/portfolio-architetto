@@ -73,7 +73,7 @@ export default function DesktopMenu() {
         initial="hidden"
         animate="show"
         className={`${navigation.className} flex gap-5 tracking-wide
-                   text-black/90 text-xl overflow-visible px-2`}
+                   text-black/90 text-xl overflow-visible px-2 font-extralight`}
       >
 
         {menuItems.map((itemData) => (

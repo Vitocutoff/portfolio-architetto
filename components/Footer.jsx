@@ -1,5 +1,16 @@
 import { FaPhoneAlt, FaMobileAlt, FaEnvelope } from "react-icons/fa";
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { Reem_Kufi_Fun, Major_Mono_Display } from "next/font/google";
+
+const navigation = Reem_Kufi_Fun({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const monospace = Major_Mono_Display({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -10,7 +21,8 @@ export default function Footer() {
     >
 
       <div
-        className="bg-gradient-to-b from-gray-900 to-gray-950 text-gray-400 py-10"
+        className="text-gray-400 py-10 bg-gradient-to-br from-neutral-900
+                   via-neutral-800 to-neutral-900"
       >
 
         <div
@@ -22,65 +34,77 @@ export default function Footer() {
           >
 
             <div
-              className="flex justify-center gap-x-8 mt-4 mb-6 text-2xl text-gray-100"
+              className="flex justify-center gap-x-8 mt-4 mb-10 text-3xl"
             >
 
               <FaPhoneAlt
                 aria-label="Telefono fisso"
+                className="text-blue-500"
               />
 
               <FaMobileAlt
                 aria-label="Cellulare"
+                className="text-neutral-100"
               />
 
               <FaEnvelope
                 aria-label="Email"
+                className="text-pink-500/90"
               />
 
             </div>
 
             <p
-              className="text-lg mb-4"
+              className={`text-2xl mb-4 text-blue-200/90
+                          tracking-widest
+                          ${navigation.className}`}
             >
 
-              STUDIO <span
-                      className="font-serif text-gray-100"
-                     >
-                       +39 0444 301913
-                     </span>
-            </p>
+              Studio:
+              <span
+                className="font-serif text-xl ml-4
+                           text-neutral-100"
+              >
 
-            <p
-              className="text-lg mb-4"
-            >
+                +39 0444 301913
 
-              CELL <span
-                    className="font-serif text-gray-100"
-                   >
-                     +39 340 7631501
-                   </span>
+              </span>
 
             </p>
 
             <p
-              className="text-lg mb-4"
+              className={`text-2xl mb-4
+                          text-blue-200/90
+                          tracking-widest
+                          ${navigation.className}`}
             >
-              EMAIL <span
-                      className="font-serif text-gray-100"
-                    >
-                      archcon@goldnet.it
-                    </span>
+
+              Cellulare:
+              <span
+                className="font-serif text-xl ml-4
+                           text-neutral-100"
+              >
+
+                +39 340 7631501
+
+              </span>
 
             </p>
 
             <p
-              className="text-lg mb-4"
+              className={`text-2xl mb-4 text-blue-200/90
+                          tracking-widest
+                          ${navigation.className}`}
             >
-              PEC <span
-                    className="font-serif text-gray-100"
-                  >
-                    mauro.concentri@archiworldpec.it
-                  </span>
+              E-mail:
+              <span
+                className="font-serif text-xl ml-4
+                           text-neutral-100"
+              >
+
+                archcon@goldnet.it
+
+              </span>
 
             </p>
 
@@ -91,29 +115,36 @@ export default function Footer() {
           >
 
             <div
-              className="border border-white px-11 py-6 text-center inline-block"
+              className="border border-white/80 rounded-md
+                         px-12 py-6 text-center inline-block"
             >
 
               <div
-                className="text-lg lg:text-2xl font-bold uppercase tracking-wide text-white"
+                className={`text-2xl font-extrabold uppercase
+                            tracking-widest text-white
+                            ${navigation.className}`}
               >
                 mauro
               </div>
 
               <div
-                className="text-lg lg:text-2xl font-bold uppercase tracking-wide text-white"
+                className={`text-2xl font-extraboldbold uppercase
+                            tracking-widest text-white
+                            ${navigation.className}`}
               >
                 concentri
               </div>
 
               <div
-                className="border-t border-white mx-auto my-2"
+                className="border-t border-white/50
+                           mx-auto my-4"
               ></div>
 
               <div
-                className="text-sm lg:text-lg tracking-wide font-mono text-white"
+                className="text-2xl tracking-wider
+                           font-mono text-blue-200/90"
               >
-                architetto
+                <span className={monospace.className}>A</span>rchitetto
               </div>
 
             </div>
@@ -125,7 +156,7 @@ export default function Footer() {
           >
 
             <p
-              className="text-lg mb-4 text-gray-100 font-serif"
+              className="text-xl mb-4 text-neutral-100 font-serif"
             >
               Corso Padova, 65 - 36100 Vicenza
             </p>
@@ -153,7 +184,7 @@ export default function Footer() {
             </p>
 
             <div
-              className="flex justify-center items-center gap-x-5 mt-5 text-2xl"
+              className="flex justify-center items-center gap-x-8 mt-10 text-3xl"
             >
 
               <FaFacebookF className='text-blue-500' />
@@ -171,9 +202,12 @@ export default function Footer() {
       </div>
 
       <div
-        className="bg-gray-50 text-gray-700 text-center py-4 text-sm font-mono font-extralight"
+        className="bg-gradient-to-r from-white/75 via-white to-white/75
+                   text-black/60 text-center py-4 font-mono font-extralight"
       >
+
         &copy; {year} Mauro Concentri | Architetto
+
       </div>
 
     </footer>

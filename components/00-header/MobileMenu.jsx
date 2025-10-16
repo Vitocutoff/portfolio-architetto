@@ -29,20 +29,21 @@ export default function MobileMenu({ isOpen, toggleMenu, closeMenu }) {
   }, [isOpen]);
 
   const links = [
-    { href: "/", label: "home" },
-    { href: "/01-cv", label: "cv" },
-    { href: "/02-impianti-sportivi", label: "impianti sportivi" },
-    { href: "/03-elenco-progetti", label: "elenco progetti" },
-    { href: "/04-work-in-progress", label: "work in progress" },
-    { href: "/05-contatti", label: "contatti" },
+    { href: "/", label: "hoMe" },
+    { href: "/01-cv", label: "cV" },
+    { href: "/02-impianti-sportivi", label: "iMpiAnti spoRtiVi" },
+    { href: "/03-elenco-progetti", label: "elenco pRoGetti" },
+    { href: "/04-work-in-progress", label: "WoRk in pRoGRess" },
+    { href: "/05-contatti", label: "contAtti" },
   ];
 
   const linkClass = (path) =>
-    `${navigation.className} text-3xl transition-colors tracking-widest ${
-      pathname === path
-        ? "text-red-800/90 font-semibold"
+    `${monospace.className}
+     transition-colors tracking-widest
+     ${pathname === path
+        ? "text-red-600/90 font-semibold"
         : "hover:text-red-900/90"
-    }`;
+      }`;
 
   return (
 
@@ -52,7 +53,7 @@ export default function MobileMenu({ isOpen, toggleMenu, closeMenu }) {
         aria-label={isOpen ? "Chiudi menu" : "Apri menu"}
         className={`fixed top-2 md:top-3
                     right-4 z-[80] text-3xl
-                    transition-colors ${isOpen ? "text-red-800/90" : "text-black/90"}`}
+                    transition-colors ${isOpen ? "text-red-900/90" : "text-black/90"}`}
       >
 
         {isOpen ? "✕" : "☰"}
@@ -89,7 +90,7 @@ export default function MobileMenu({ isOpen, toggleMenu, closeMenu }) {
               >
 
                 <div
-                  className={`text-xl font-extrabold uppercase
+                  className={`text-2xl font-extrabold uppercase
                              tracking-widest ${navigation.className}`}
                 >
 
@@ -97,19 +98,19 @@ export default function MobileMenu({ isOpen, toggleMenu, closeMenu }) {
 
                 </div>
 
-                <div className={`text-xl font-extrabold ${navigation.className}
+                <div className={`text-2xl font-extrabold ${navigation.className}
                                 uppercase tracking-widest`}>
                   concentri
                 </div>
 
                 <div
-                  className="border-t border-neutral-500
+                  className="border-t border-neutral-600/60
                              mx-auto my-2"
                 ></div>
 
                 <div
-                  className="text-xl -tracking-wide
-                             font-mono"
+                  className="text-2xl tracking-wider
+                             font-mono text-blue-200/90"
                 >
 
                   <span className={monospace.className}>A</span>rchitetto
